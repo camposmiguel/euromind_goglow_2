@@ -1,6 +1,5 @@
 package com.miguelcr.a04_3inline;
 
-import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,10 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
     ImageView box1, box2, box3, box4, box5, box6, box7, box8, box9;
@@ -41,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         box9 = (ImageView)findViewById(R.id.imageViewBox9);
 
         player = (TextView) findViewById(R.id.player);
-        
+
     }
 
     public void onBoxClick(View view) {
