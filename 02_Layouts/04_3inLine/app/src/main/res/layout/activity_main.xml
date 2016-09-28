@@ -36,16 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_box_empty"
-        android:id="@+id/imageViewBox3"
-        android:layout_alignTop="@+id/imageViewBox2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="onBoxClick"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_box_empty"
         android:layout_marginTop="53dp"
         android:id="@+id/imageViewBox1"
         android:layout_marginLeft="10dp"
@@ -127,6 +117,16 @@
         android:layout_alignParentBottom="true"
         android:textColor="@android:color/white"
         android:padding="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_box_empty"
+        android:id="@+id/imageViewBox3"
+        android:onClick="onBoxClick"
+        android:layout_alignTop="@+id/imageViewBox2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
