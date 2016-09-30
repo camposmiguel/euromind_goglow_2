@@ -17,6 +17,7 @@ public class GameActivity extends AppCompatActivity {
     Random random;
     ImageView duck;
     int counter = 0;
+    boolean gameOver = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class GameActivity extends AppCompatActivity {
         random = new Random();
 
         // Countdown timer 60s >>> 60000ms
-        new CountDownTimer(60000, 1000) {
+        new CountDownTimer(3000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 textCountdown.setText(millisUntilFinished / 1000+"s");
@@ -46,31 +47,34 @@ public class GameActivity extends AppCompatActivity {
 
             public void onFinish() {
                 textCountdown.setText("Game over!");
+                gameOver = true;
             }
         }.start();
 
     }
 
     public void generateRandomDuckPosition(View v) {
-        // Increase the counter
-        counter++;
-        textCounter.setText(String.valueOf(counter));
+        if(!gameOver) {
+            // Increase the counter
+            counter++;
+            textCounter.setText(String.valueOf(counter));
 
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        int height = displaymetrics.heightPixels;
-        int width = displaymetrics.widthPixels;
+            DisplayMetrics displaymetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+            int height = displaymetrics.heightPixels;
+            int width = displaymetrics.widthPixels;
 
-        // Get imagesView properties
-        int duckWidth = duck.getWidth();
-        int duckHeight = duck.getHeight();
+            // Get imagesView properties
+            int duckWidth = duck.getWidth();
+            int duckHeight = duck.getHeight();
 
-        int xPosition = random.nextInt(width - duckWidth - 0 + 1) + 0;
-        int yPosition = random.nextInt(height - duckHeight - 0 + 1) + 0;
+            int xPosition = random.nextInt(width - duckWidth - 0 + 1) + 0;
+            int yPosition = random.nextInt(height - duckHeight - 0 + 1) + 0;
 
-        // Move the ImageViewDuck to the new position (xPosition,yPosition)
-        duck.setX(xPosition);
-        duck.setY(yPosition);
+            // Move the ImageViewDuck to the new position (xPosition,yPosition)
+            duck.setX(xPosition);
+            duck.setY(yPosition);
+        }
     }
 
 }
