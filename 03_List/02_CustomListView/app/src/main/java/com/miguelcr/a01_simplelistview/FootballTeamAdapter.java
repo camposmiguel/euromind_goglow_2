@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 /**
@@ -39,7 +41,7 @@ public class FootballTeamAdapter extends ArrayAdapter {
 
         // Get the information for the current FootballTeam
         FootballTeam current = items.get(position);
-        int logo = current.getLogo();
+        String logo = current.getLogo();
         String name = current.getName();
         String city = current.getCity();
 
@@ -51,7 +53,11 @@ public class FootballTeamAdapter extends ArrayAdapter {
         TextView textViewCity = (TextView)layoutWithValues
                 .findViewById(R.id.textViewCity);
 
-        imageViewLogo.setImageResource(logo);
+        Picasso.with(ctx)
+                .load(logo)
+                .resize(96, 96)
+                .into(imageViewLogo);
+
         textViewName.setText(name);
         textViewCity.setText(city);
 

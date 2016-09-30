@@ -5,21 +5,21 @@ package com.miguelcr.a01_simplelistview;
  */
 
 public class FootballTeam {
-    private int logo;
+    private String logo;
     private String name;
     private String city;
 
-    public FootballTeam(int logo, String name, String city) {
+    public FootballTeam(String logo, String name, String city) {
         this.logo = logo;
         this.name = name;
         this.city = city;
     }
 
-    public int getLogo() {
+    public String getLogo() {
         return logo;
     }
 
-    public void setLogo(int logo) {
+    public void setLogo(String logo) {
         this.logo = logo;
     }
 

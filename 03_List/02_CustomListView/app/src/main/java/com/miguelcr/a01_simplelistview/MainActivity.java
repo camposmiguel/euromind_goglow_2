@@ -28,27 +28,21 @@ public class MainActivity extends AppCompatActivity{
         // 2. An array of data
         footbalTeams = new ArrayList<FootballTeam>();
 
-        FootballTeam leicester = new FootballTeam(
-                R.drawable.ic_leicester_city,
+        footbalTeams.add(new FootballTeam(
+                "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_(crest).svg/1010px-FC_Barcelona_(crest).svg.png",
                 "Leicester City FC",
                 "London, UK"
-        );
-
-        FootballTeam barcelona = new FootballTeam(
-                R.drawable.ic_barcelona,
+        ));
+        footbalTeams.add(new FootballTeam(
+                "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_(crest).svg/1010px-FC_Barcelona_(crest).svg.png",
                 "Barça FC",
                 "Barcelona, Spain"
-        );
-
-        FootballTeam madrid = new FootballTeam(
-                R.drawable.ic_madrid,
+        ));
+        footbalTeams.add(new FootballTeam(
+                "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_(crest).svg/1010px-FC_Barcelona_(crest).svg.png",
                 "Real Madrid CF",
                 "Madrid, Spain"
-        );
-
-        footbalTeams.add(leicester);
-        footbalTeams.add(barcelona);
-        footbalTeams.add(madrid);
+        ));
 
 
         // 3. Adapter to show String[] in ListView
