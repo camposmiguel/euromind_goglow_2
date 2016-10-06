@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         "Hello, "+callPhones.get(info.position).getContactName());
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
-                
+
                 return true;
             default:
                 return super.onContextItemSelected(item);
